@@ -55,6 +55,6 @@ public class HandsEnabled : MonoBehaviour
         if (inputDevice.TryGetFeatureValue(CommonUsages.grip, out float valueGrip))
             handsAnimator.SetFloat("Grip", valueGrip);
         else
-            handsAnimator.SetFloat("Grip", valueGrip);
+            handsAnimator.SetFloat("Grip", 0);
     }
 }
