@@ -1,4 +1,21 @@
-# AP University College - VR Experience
+<h1 align="center">AP University College - VR Experience (group 6)</h1>
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Artesis_Plantijn_Hogeschool_Antwerpen.jpg" width="300" alt="AP Logo"/>
+  <br>
+    <i>Welcome to the VR Experience repo of the students of AP University College for the course Immersive storytelling. We're the pupils from group six and our VR Experience will tackle the risks and effects of intoxication. </i>
+</p>
+<br>
+
+[![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=flat&logo=unity)](https://unity3d.com)  ![GitHub last commit](https://img.shields.io/github/last-commit/ThibautHumblet/VRExperience)  ![GitHub contributors](https://img.shields.io/github/contributors/ThibautHumblet/VRExperience)  ![GitHub repo size](https://img.shields.io/github/repo-size/ThibautHumblet/VRExperience)  ![GitHub](https://img.shields.io/github/license/ThibautHumblet/VRExperience)  ![GitHub Repo stars](https://img.shields.io/github/stars/ThibautHumblet/VRExperience?style=social)  ![GitHub watchers](https://img.shields.io/github/watchers/ThibautHumblet/VRExperience?style=social)
+
+<hr>
+
+## Table of contents
+- Install
+- Specific project-related documentation
+  - Inverted sphere
+  - Hands and interaction
 
 ## Install
 Because we're building a VR application in Unity, a couple of things need to be configured before we can start developing.
