@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-
+#if UNITY_EDITOR
 public class InvertedSphere : EditorWindow
 {
     private string st = "1.0";
@@ -54,6 +54,4 @@ public class InvertedSphere : EditorWindow
         DestroyImmediate(go);
     }
 }
-
-
-
+#endif
