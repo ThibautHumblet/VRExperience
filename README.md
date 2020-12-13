@@ -28,11 +28,11 @@ Now your ready to develop your own Unity VR Experience! Try playing around with 
 ## Specific project-related documentation
 
 ### Inverted sphere
-Normally, Unity reders its materials on the outside of an object. Because we want to make use of a 360° video, we need a sollution.
+Normally, Unity renders its materials on the outside of an object. Because we want to make use of a 360° video, we need a solution.
 
-To render our video's, we will be making use of an inverted sphere. This is a fancy word to explain that we render our video on the inside of set sphere. We generate our sphere using an InvertedSphere.cs script. For the base of this scipt, we used mr. [Tom Peeters](https://github.com/tomptrs)' code. Because the code was not sufficient to our needs, we rewrote some pars of his code. 
+To render our video's, we will be making use of an inverted sphere. This is a fancy word to explain that we render our video on the inside of set sphere. We generate our sphere using an InvertedSphere.cs script. For the base of this scipt, we used mr. [Tom Peeters](https://github.com/tomptrs)' code. Because the code was not sufficient to our needs, we rewrote some parts of his code. 
 
-First of all, we added a tag to check if the code was running in the Unity Editor or the built application. The inital code gave some nasty errors if we tried to build the application.
+First of all, we added a tag to check if the code was running in the Unity Editor or the built application. The inital code gave some nasty errors when we tried to build the application.
 ````cs
 #if UNITY_EDITOR // <-- This simple line prevents the application from breaking if not in editor mode
 
