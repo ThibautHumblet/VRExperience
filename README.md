@@ -3,8 +3,8 @@
 ## Install
 Because we're building a VR application in Unity, a couple of things need to be configured before we can start developing.
 
-### 1. Clone this Github Repo & open it
-Clone this repo by executing the following powershell command in your desired folder.
+### 1. Clone this GitHub Repo & open it
+Clone this repo by executing the following PowerShell command in your desired folder.
 ````
 git clone https://github.com/ThibautHumblet/VRExperience.git
 ````
@@ -17,10 +17,10 @@ Download the necessary videos from our [Google Drive](https://drive.google.com/d
 In your Unity project, enable preview packages in Edit > Project Settings > Package Manager > Advanced settings
 
 ### 4. Install XR Interaction Toolkit
-Install the XR interaction toolkit in your package manager. This can be done in Window > Package Manager > XR Interaction Toolkit > Install . Be sure you have enabled all packages from the Unity Registery. 
+Install the XR interaction toolkit in your package manager. This can be done in Window > Package Manager > XR Interaction Toolkit > Install. Be sure you have enabled all packages from the Unity Registry. 
 
 ### 5. Start developing
-Now your ready to develop your own Unity VR Experience! Try playing around with all the different features and XR Components. If you're stuck, or if you need some inspiration, you can always check out this repo or visit the following useful guides;
+Now you're ready to develop your own Unity VR Experience! Try playing around with all the different features and XR Components. If you're stuck, or if you need some inspiration, you can always check out this repo or visit the following useful guides;
 - [VR With Andrew (Youtube)](https://www.youtube.com/channel/UCG8bDPqp3jykCGbx-CiL7VQ)
 - [Getting started with VR in Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/VROverview.html)
 - [Valem (Youtube)](https://www.youtube.com/channel/UCPJlesN59MzHPPCp0Lg8sLw)
@@ -31,9 +31,9 @@ Now your ready to develop your own Unity VR Experience! Try playing around with 
 ### Inverted sphere
 Normally, Unity renders its materials on the outside of an object. Because we want to make use of a 360° video, we need a solution.
 
-To render our video's, we will be making use of an inverted sphere. This is a fancy word to explain that we render our video on the inside of set sphere. We generate our sphere using an InvertedSphere.cs script. For the base of this scipt, we used mr. [Tom Peeters](https://github.com/tomptrs)' code. Because the code was not sufficient to our needs, we rewrote some pars of his code. 
+To render our video's, we will be making use of an inverted sphere. This is a fancy word to explain that we render our video on the inside of set sphere. We generate our sphere using an InvertedSphere.cs script. For the base of this script, we used Mr. [Tom Peeters](https://github.com/tomptrs)' code. Because the code was not sufficient to our needs, we rewrote some parts of his code. 
 
-We added a tag to check if the code was running in the Unity Editor or the built application. The inital code gave some nasty errors if we tried to build the application.
+We added a tag to check if the code was running in the Unity Editor or the built application. The initial code gave some nasty errors if we tried to build the application.
 ````cs
 #if UNITY_EDITOR // <-- This simple line prevents the application from breaking if not in editor mode
 
@@ -51,7 +51,7 @@ The inital code was designed to put it in a specific place in a specific folder.
 We want to let the user be immersed in our VR experience and let them use their hands. To achieve this, hands interaction was implemented in the application.
 First, we downloaded the hands models from the [Oculus Developers](https://developer.oculus.com/downloads/package/oculus-hand-models/) page. After downloading them, we put the assets in our Unity project. 
 
-Then, we added two empty objects in our XR Rigs Camera Offset. We renamed the objects both *LeftHand* and *RightHand* and gave them both an XR Controller and XR Direct interactor. Now we're ready to interact with objects, but we can't see our hands yet. We need to make some prefabs where we will store our hands. In the prefab, we put our *HandsEnabled* script and our models. When the code starts we initalize our controllers. We also try to initalize them when the controllers are offline. This way, the user will be able to activite his controllers when the application is already running.
+Then, we added two empty objects in our XR Rigs Camera Offset. We renamed the objects both *LeftHand* and *RightHand* and gave them both an XR Controller and XR Direct interactor. Now we're ready to interact with objects, but we can't see our hands yet. We need to make some prefabs where we will store our hands. In the prefab, we put our *HandsEnabled* script and our models. When the code starts, we initialize our controllers. We also try to initialize them when the controllers are offline. This way, the user will be able to activate his controllers when the application is already running.
 ````cs
 void Start()
 {
@@ -85,9 +85,9 @@ void InitializeControllers()
 }
 ````
 
-To update our animations, we have a UpdateAnimations() script. We use this script to listen to the differen trigger and button values. Depending on the value, we parse this to our animator. In this animator, we added a blend tree to make a transition between our models.
+To update our animations, we have a UpdateAnimations() script. We use this script to listen to the different trigger and button values. Depending on the value, we parse this to our animator. In this animator, we added a blend tree to make a transition between our models.
 
-When we increase our *grip* or our *trigger* values, this will have an inpact on our animations. For example, if the trigger value is set to one, we want to have a pinching animation. 
+When we increase our *grip* or our *trigger* values, this will have an impact on our animations. For example, if the trigger value is set to one, we want to have a pinching animation. 
 
 <img src="/img/BlendTree.gif" alt="Animated blend tree example"/>
 
@@ -104,7 +104,7 @@ void UpdateAnimations()
     if (inputDevice.TryGetFeatureValue(CommonUsages.grip, out float valueGrip))
         handsAnimator.SetFloat("Grip", valueGrip);
     else
-        handsAnimator.SetFloat("Grip", valueGrip);
+        handsAnimator.SetFloat("Grip", 0);
 }
 ````
 
