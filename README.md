@@ -126,3 +126,46 @@ void UpdateAnimations()
 ````
 
 When we have our hands and our interactions, grabbing objects is extremely easy. We only need to set some components to our desired object and we're good to go. More precisely we need to add a *Collider*, to make the object collidable, a *Rigidbody*, for giving the object some physics, and a *XR Grab Interactable*, to let our XR toolkit handle the grabbing. After adding these components, we have our object interaction.
+
+### Sphere teleportation
+Because our project consists of multiple video clips, we need to find a way to change between them. It's not that easy to use the same inverted sphere and just switch the video. We found a workaround to just teleport between different spheres when we interact with a certain object.
+
+```cs
+public class Cameras : MonoBehaviour
+{
+    public Camera[] cameras;
+    private int currentCameraIndex;
+    public GameObject[] selectorArr = new GameObject[3];
+
+    void start()
+    {
+        ...
+    }
+
+    void Update()
+    {
+        ...
+    }
+}
+```
+
+First, we make an assign our variables. We make an array of all our camera's where we can switch through. We also keep track of our current camera, using the currentCameraIndex variable. We wil use selectorArr to wait playing these videos, until we enter the designated sphere.
+
+```cs
+    void Start()
+    {
+        currentCameraIndex = 0;
+
+        for (int i = 1; i < cameras.Length; i++)
+        {
+            cameras[i].gameObject.SetActive(false);
+        }
+
+        if (cameras.Length > 0)
+        {
+            cameras[0].gameObject.SetActive(true);
+            Debug.Log("Camera with name: " + cameras[0].GetComponent<Camera>().name + ", is now enabled"); // this is for debugging purposes
+        }
+    }
+```
+In our initialization script, we check how many cameras there are. Then we will turn all these camera's off, except the first one. Then we check if there are multiple cameras added to the controller, we will just enable the first one.
