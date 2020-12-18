@@ -27,6 +27,9 @@ git clone https://github.com/ThibautHumblet/VRExperience.git
 ````
 Afterwards open the folder in Unity.
 
+**Important**
+When opening the project in Unity, use version 2020.2.0f1!
+
 ### 2. Import the necessary videos
 Download the necessary videos from our [Google Drive](https://drive.google.com/drive/folders/1AhZGsppMoFCiUZs7fdNkun8_yRyc4pmh?usp=sharing). When you've downloaded the videos, put them in the *Video* folder in the Unity assets. Afterwards, check if the right videos are added to the *Video Clip* property in the *Video Player* component from the *Inverted Sphere* object 
 
