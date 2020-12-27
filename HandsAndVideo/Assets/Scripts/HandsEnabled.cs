@@ -48,12 +48,18 @@ public class HandsEnabled : MonoBehaviour
     void UpdateAnimations()
     {
         if (inputDevice.TryGetFeatureValue(CommonUsages.trigger, out float valueTrigger))
+        { 
             handsAnimator.SetFloat("Trigger", valueTrigger);
+            
+         }
         else
             handsAnimator.SetFloat("Trigger", 0);
 
         if (inputDevice.TryGetFeatureValue(CommonUsages.grip, out float valueGrip))
+        {
             handsAnimator.SetFloat("Grip", valueGrip);
+        }
+
         else
             handsAnimator.SetFloat("Grip", 0);
     }
