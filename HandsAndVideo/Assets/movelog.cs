@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class movelog : MonoBehaviour
 {
+
+    public string logWaarde="geef value eerst pls";
+    int aantalKeer;
+
     void Update()
     {
         if (transform.hasChanged)
         {
-            Debug.Log("The transform has changed!");
+            if (aantalKeer >= 1)
+            {
+                Debug.Log(logWaarde);
+            }
             transform.hasChanged = false;
+            aantalKeer++;
         }
     }
 }
