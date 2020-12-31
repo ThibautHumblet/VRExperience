@@ -329,3 +329,187 @@ System memory in use after: 87.9 MB.
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2051.
 Total: 1.863000 ms (FindLiveObjects: 0.180400 ms CreateObjectMapping: 0.031300 ms MarkObjects: 1.632800 ms  DeleteObjects: 0.017500 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 933.920188 seconds.
+  path: Assets/Scripts/InvertedSphere.cs
+  artifactKey: Guid(3b1a27d13468a1c4e9109c8dcbc741b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/InvertedSphere.cs using Guid(3b1a27d13468a1c4e9109c8dcbc741b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50137271cc6e52cc6cb42c4af3ca2413') in 0.008101 seconds
+  Import took 0.011468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001906 seconds.
+  path: Assets/Scripts/InvertedSphere.cs
+  artifactKey: Guid(3b1a27d13468a1c4e9109c8dcbc741b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/InvertedSphere.cs using Guid(3b1a27d13468a1c4e9109c8dcbc741b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50137271cc6e52cc6cb42c4af3ca2413') in 0.003041 seconds
+  Import took 0.006087 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006451 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.19 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.9 MB.
+System memory in use after: 88.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2054.
+Total: 1.982100 ms (FindLiveObjects: 0.152600 ms CreateObjectMapping: 0.045800 ms MarkObjects: 1.770200 ms  DeleteObjects: 0.012100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.930 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.1 MB.
+System memory in use after: 88.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2057.
+Total: 1.711000 ms (FindLiveObjects: 0.255700 ms CreateObjectMapping: 0.028100 ms MarkObjects: 1.411200 ms  DeleteObjects: 0.014800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002835 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.828 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.2 MB.
+System memory in use after: 88.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2060.
+Total: 1.683300 ms (FindLiveObjects: 0.140500 ms CreateObjectMapping: 0.034700 ms MarkObjects: 1.493700 ms  DeleteObjects: 0.013600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1861.669189 seconds.
+  path: Assets/Video/The Wellerman _ The Longest Johns - 360 Video in a Forest.mp4
+  artifactKey: Guid(0725c2e4c7255a04e99e0136bcb46d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/The Wellerman _ The Longest Johns - 360 Video in a Forest.mp4 using Guid(0725c2e4c7255a04e99e0136bcb46d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e706846ba8924c3824b98e712975cfdb') in 0.018218 seconds
+  Import took 0.020663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Video/360 BIRTHDAY PARTY.mp4
+  artifactKey: Guid(3e4e3d294cfe58046ab93eb5eaa3b58a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/360 BIRTHDAY PARTY.mp4 using Guid(3e4e3d294cfe58046ab93eb5eaa3b58a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7937dd5652201678bea892e85fdc634b') in 0.003512 seconds
+  Import took 0.006702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Video/360 Video_ Relaxing walk in the forest.mp4
+  artifactKey: Guid(1acb1fe71b614e345907fd29afde919a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/360 Video_ Relaxing walk in the forest.mp4 using Guid(1acb1fe71b614e345907fd29afde919a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be68a4013ec8f4ad2e0cbdb3f740a42d') in 0.003363 seconds
+  Import took 0.006158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Video/VID_20201120_130105_00_005(1).mp4
+  artifactKey: Guid(024218e469424e443a2732d09a3b4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/VID_20201120_130105_00_005(1).mp4 using Guid(024218e469424e443a2732d09a3b4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a93e0c362ca7568d153b121f87dca6b') in 0.003723 seconds
+  Import took 0.006218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Video/VID_20201120_130105_00_005(1) 1.mp4
+  artifactKey: Guid(e95daa9ba8ddce4469baecd7fcaa1d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/VID_20201120_130105_00_005(1) 1.mp4 using Guid(e95daa9ba8ddce4469baecd7fcaa1d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7511ea3eec3f9d7e97acef44d3d8cae0') in 0.003962 seconds
+  Import took 0.007495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008474 seconds.
+  path: Assets/Video/VID_20201120_130105_00_005(1).mp4
+  artifactKey: Guid(024218e469424e443a2732d09a3b4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Video/VID_20201120_130105_00_005(1).mp4 using Guid(024218e469424e443a2732d09a3b4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a93e0c362ca7568d153b121f87dca6b') in 0.003122 seconds
+  Import took 0.005994 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003093 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.27 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\phili\Documents\AP\3e\1e trimester\MixedReal\Project\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.4 MB.
+System memory in use after: 88.5 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2063.
+Total: 1.827300 ms (FindLiveObjects: 0.150300 ms CreateObjectMapping: 0.035000 ms MarkObjects: 1.619400 ms  DeleteObjects: 0.020700 ms)
+
