@@ -470,10 +470,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 140790158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
+  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logWaarde: IDK
 --- !u!114 &140790165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1042,9 @@ MonoBehaviour:
   cameras:
   - {fileID: 168276269}
   - {fileID: 186847101}
+  - {fileID: 1671844483}
+  - {fileID: 522558033}
+  - {fileID: 938470616}
   selectorArr:
   - {fileID: 1912175554}
   - {fileID: 1824908717}
@@ -1761,10 +1763,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 402009819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
+  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logWaarde: XTC
 --- !u!114 &402009826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,10 +4192,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310453926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
+  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logWaarde: LSD
 --- !u!114 &1310453933
 MonoBehaviour:
   m_ObjectHideFlags: 0

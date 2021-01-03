@@ -9,7 +9,7 @@ public class Cameras : MonoBehaviour
     public Camera[] cameras;
     private int currentCameraIndex;
     public GameObject[] selectorArr = new GameObject[3];
-    movelog movelog = new movelog();
+    private movelog movelog = new movelog();
 
 
     // Use this for initialization
