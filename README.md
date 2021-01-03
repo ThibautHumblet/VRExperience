@@ -197,3 +197,39 @@ void Update()
     }
 }
 ```
+
+### Shaders
+
+Shaders are code that run on the GPU instead of the CPU to change levels of colours in an image, produce special effects and video post-processing. It tells the computer how to draw something in a specific way. The language used to create these shaders are Cg(C for Graphics) and HLSL (High-Level Shading Language).
+
+At the start you want to give compilation directives which can be given through  **#pragma statements**. There are many pragma's to use but in the Drunk and Colourshift shader we use the basics ones that are used and target 3.0. The target allows certain instructions. In 3.0 we have the math instructions we need to distort the images with trigonometry.
+```
+#pragma vertex vert
+#pragma fragment frag
+#pragma fragmentoption ARB_precision_hint_fastest
+#pragma target 3.0
+```
+After this we have the structures. Structures pass raw info about geometry being rendered to the vertex shader. Essentially objects in 3D are typically created using triangles. These triangles corners are what vertices are. You can manipulate these triangles to distort images or change the colours. For example if you have 1 sprite of a character. You can use a shader to change the colours of this character and essentially have infinite different looking characters while only using 1 image.
+For the drunk shader we will map the vertices in uv (coordinates) and create a wavy effect by using trigonometry. The time is to have the distorted effect happen over time instead of just having a still wavy image.
+```
+inline float2 getOffset(float time, float2 uv)
+{ 
+float a = 1.0 + 0.5 * sin(time + uv.x * _Distortion);
+float b = 1.0 + 0.5 * cos(time + uv.y * _Distortion);
+return 0.02 * float2(a + sin(b), b + cos(a));
+}
+```
+The "LSD" script: Colourshift. Only makes use of the colours of these vertices. It takes the colour red and blue of these triangles and shifts it to the side. This gives the objects on the screen a distorted view of seeing things double.
+
+```
+col.r = tex2D(_MainTex, p+offset.xy).r;
+col.b = tex2D(_MainTex, p+offset.yx).b;
+```
+
+Shaders are extremely difficult to work with and so we've made use of shaders that already exist online and edited them a little to something we personally liked. Sources that were used to create and learn more about shaders as well as more extensive explanations are the following links:
+
+https://www.nvidia.com/en-us/drivers/feature-vertexshader/#:~:text=What%20is%20a%20vertex%3F,on%20the%20objects'%20vertex%20data
+https://wiki.unity3d.com/index.php/Shader_Code
+https://github.com/teebarjunk/Unity-ShaderGraphNodes
+https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
+
