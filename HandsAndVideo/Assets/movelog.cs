@@ -5,7 +5,7 @@ using UnityEngine;
 public class movelog : MonoBehaviour
 {
 
-    public string logWaarde="geef value eerst pls";
+    public static string logWaarde="geef value eerst pls";
     int aantalKeer;
 
     void Update()
