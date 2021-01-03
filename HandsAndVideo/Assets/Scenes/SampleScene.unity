@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 140790165}
   - component: {fileID: 140790164}
   m_Layer: 0
-  m_Name: IDK
+  m_Name: Alcohol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logWaarde: IDK
+  logWaarde: Alcohol
 --- !u!114 &140790165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2070,7 +2070,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418278446}
-  m_Text: IDK
+  m_Text: ALcohol
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
