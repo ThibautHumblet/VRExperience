@@ -555,9 +555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _log: voet
-  manager: {fileID: 0}
-  camerascript: {fileID: 228447138}
 --- !u!114 &122723756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,7 +834,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 140790158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _log: ALKEUL
@@ -2730,11 +2727,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 346667361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _log: voet
-  manager: {fileID: 0}
+  manager: {fileID: 1293188365}
   camerascript: {fileID: 228447138}
 --- !u!114 &346667364
 MonoBehaviour:
@@ -3097,7 +3094,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 402009819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _log: BADTRIP
@@ -7366,7 +7363,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310453926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _log: LSD
@@ -7681,11 +7678,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1364079514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _log: auto
-  manager: {fileID: 0}
+  manager: {fileID: 1293188365}
   camerascript: {fileID: 228447138}
 --- !u!114 &1364079517
 MonoBehaviour:
@@ -9355,9 +9352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _log: auto
-  manager: {fileID: 0}
-  camerascript: {fileID: 228447138}
 --- !u!114 &1719971792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10521,7 +10515,7 @@ Transform:
   m_Children:
   - {fileID: 2020435432}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2020435431
 GameObject:
