@@ -9,12 +9,20 @@ public class Cameras : MonoBehaviour
     public Camera[] cameras;
     private int currentCameraIndex;
     public GameObject[] selectorArr = new GameObject[3];
-    private movelog movelog = new movelog();
+    private movelog movelog;
+
+    public string aangeraakt="yeet";
+
+    //public static Camera instance;
 
 
     // Use this for initialization
     void Start()
     {
+        
+
+        //movelog = gameObject.AddComponent<movelog>();
+
 
         currentCameraIndex = 0;
 
@@ -38,28 +46,34 @@ public class Cameras : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //kijken naar de logwaarde (static var in movelog)
-       // afhankelijk van de keuze zullen er bepaalde camera's worden aan of uitgezet worden
-        switch (movelog.logWaarde)
+
+        if (aangeraakt != "yeet")
         {
-            case "Friendsenter":
-                updateCamera(1);
-                break;
-            case "LSD":
-                updateCamera(2);
-                break;
-            case "ALKEUL":
-                updateCamera(3);
-                break;
-            case "BADTRIP":
-                updateCamera(4);
-                break;
-            default:
-                updateCamera(0);
-                break;
+            //kijken naar de logwaarde (static var in movelog)
+            // afhankelijk van de keuze zullen er bepaalde camera's worden aan of uitgezet worden
+            switch (aangeraakt)
+            {
+                case "Friendsenter":
+                    updateCamera(1);
+                    break;
+                case "LSD":
+                    updateCamera(2);
+                    break;
+                case "ALKEUL":
+                    updateCamera(3);
+                    break;
+                case "BADTRIP":
+                    updateCamera(4);
+                    break;
+                default:
+                    updateCamera(0);
+                    break;
+            }
+
         }
 
         //hieronder gewoon een oud script waar voor van camera te wisselen
+        
         /*
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -93,4 +107,5 @@ public class Cameras : MonoBehaviour
         Debug.Log("Camera with name: " + cameras[cameranumb].GetComponent<Camera>().name + ", is now enabled");
 
     }
+  
 }

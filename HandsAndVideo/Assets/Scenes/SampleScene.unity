@@ -473,6 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _log: ALKEUL
+  camerascript: {fileID: 228447138}
 --- !u!114 &140790165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,15 +1042,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras:
+  - {fileID: 1436220504}
   - {fileID: 168276269}
   - {fileID: 186847101}
   - {fileID: 1671844483}
   - {fileID: 522558033}
   - {fileID: 938470616}
   selectorArr:
-  - {fileID: 1912175554}
-  - {fileID: 1824908717}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  aangeraakt: yeet
 --- !u!4 &228447139
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,6 +1770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _log: XTC
+  camerascript: {fileID: 228447138}
 --- !u!114 &402009826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3833,7 +3839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d16ef4862d54db44a956c1f38c96974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logWaarde: geef value eerst pls
 --- !u!1 &1174363376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,6 +4200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4970ac2da08b7694998f5a6053cc72fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _log: LSD
+  camerascript: {fileID: 228447138}
 --- !u!114 &1310453933
 MonoBehaviour:
   m_ObjectHideFlags: 0
