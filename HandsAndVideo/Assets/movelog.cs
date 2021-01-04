@@ -5,19 +5,38 @@ using UnityEngine;
 public class movelog : MonoBehaviour
 {
 
-    public static string logWaarde="geef value eerst pls";
-    int aantalKeer;
+    public string _log = "geef value pls";
+    public GameObject manager;
+    public string log
+    {
+        get { return _log; }
+        set { _log = value; }
+    }
+
+    //public GameObject cameraopbject;
+    public Cameras camerascript;
+
+
+    int aantalKeer = 0;
 
     void Update()
     {
+        // if (camerascript.timer > 3)
+        // {
         if (transform.hasChanged)
         {
-            if (aantalKeer >= 1)
+            if (aantalKeer >= 3)
             {
-                Debug.Log(logWaarde);
+                Debug.Log(log);
+                // pas aan aangeraakt van camera script
+                camerascript.aangeraakt = log;
+
+                manager.SetActive(false);
             }
             transform.hasChanged = false;
             aantalKeer++;
         }
+        //  }
     }
+
 }
