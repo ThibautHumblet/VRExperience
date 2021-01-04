@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movelog: MonoBehaviour
+public class movelog : MonoBehaviour
 {
 
-    //public static string logWaarde="geef value eerst pls";
-
     public string _log = "geef value pls";
+    public GameObject manager;
     public string log
     {
         get { return _log; }
@@ -18,24 +17,26 @@ public class movelog: MonoBehaviour
     public Cameras camerascript;
 
 
-    int aantalKeer;
-
-    /*private void Start()
-    {
-        camerascript= cameraopbject.GetComponent<Cameras>();
-    }*/
+    int aantalKeer = 0;
 
     void Update()
-    { 
+    {
+        // if (camerascript.timer > 3)
+        // {
         if (transform.hasChanged)
         {
-            if (aantalKeer >= 1)
+            if (aantalKeer >= 3)
             {
+                Debug.Log(log);
                 // pas aan aangeraakt van camera script
                 camerascript.aangeraakt = log;
+
+                manager.SetActive(false);
             }
             transform.hasChanged = false;
             aantalKeer++;
         }
+        //  }
     }
+
 }
