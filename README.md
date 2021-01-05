@@ -202,7 +202,7 @@ void Update()
 
 Shaders are code that run on the GPU instead of the CPU to change levels of colours in an image, produce special effects and video post-processing. It tells the computer how to draw something in a specific way. The language used to create these shaders are Cg(C for Graphics) and HLSL (High-Level Shading Language).
 
-At the start you want to give compilation directives which can be given through  **#pragma statements**. There are many pragma's to use but in the Drunk and Colourshift shader we use the basics ones that are used and target 3.0. The target allows certain instructions. In 3.0 we have the math instructions we need to distort the images with trigonometry.
+At the start you want to give compilation directives which can be given through  **#pragma statements**. There are many pragma's to use but in the Drunk and Colourshift shader we use the basics ones used in all shaders and target 3.0. The target allows certain instructions. In 3.0 we have the math instructions we need to distort the images with trigonometry.
 ```
 #pragma vertex vert
 #pragma fragment frag
