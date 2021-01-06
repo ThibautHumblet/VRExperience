@@ -221,9 +221,9 @@ For the drunk shader we will map the vertices in uv (coordinates) and create a w
 ```cs
 inline float2 getOffset(float time, float2 uv)
 { 
-float a = 1.0 + 0.5 * sin(time + uv.x * _Distortion);
-float b = 1.0 + 0.5 * cos(time + uv.y * _Distortion);
-return 0.02 * float2(a + sin(b), b + cos(a));
+    float a = 1.0 + 0.5 * sin(time + uv.x * _Distortion);
+    float b = 1.0 + 0.5 * cos(time + uv.y * _Distortion);
+    return 0.02 * float2(a + sin(b), b + cos(a));
 }
 ```
 The "LSD" script: Colourshift. Only makes use of the colours of these vertices. It takes the colour red and blue of these triangles and shifts it to the side. This gives the objects on the screen a distorted view of seeing things double.
