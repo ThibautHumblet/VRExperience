@@ -31,7 +31,12 @@ public class movelog : MonoBehaviour
                 // pas aan aangeraakt van camera script
                 camerascript.aangeraakt = log;
 
-                manager.SetActive(false);
+                if (camerascript.timerwandelen>=14 && camerascript.timerwandelenstart)
+                    manager.SetActive(true);
+                else
+                    manager.SetActive(false);
+
+                this.gameObject.SetActive(false);
             }
             transform.hasChanged = false;
             aantalKeer++;
