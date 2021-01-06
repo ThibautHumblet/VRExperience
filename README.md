@@ -22,6 +22,7 @@
   - [Hands and interaction](#hands-and-interaction)
   - [Sphere 'teleportation'](#sphere-teleportation)
   - [Shaders](#shaders)
+- [Our team](#our-team)
 
 ## Install
 Because we're building a VR application in Unity, a couple of things need to be configured before we can start developing.
@@ -241,3 +242,16 @@ Since shaders are extremely difficult to work with, we've based ourself on some 
 - [GLSL Noise Algorithms](https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83)
 
 We have learned a lot about shaders and how they can improve the immersive experience. Now we know how to quickly apply these to our videos and how to show these as a proof of concept. We are proud of the knowledge that we gained since this was a completely new subject.
+
+## Our team
+Our code was written by these people. Due to the fact that we did not all have a pair of VR glasses, the development was not always that easy. But through good communication and teamwork, everyone did their fair share.
+
+- [Thibaut Humblet](https://github.com/ThibautHumblet)
+- [Stef Martens](https://github.com/stef2607)
+- [Dries Bernaerts](https://github.com/DriesBe)
+- [Kasper Ruys](https://github.com/KasperRuys)
+- [Philip De Rudder](https://github.com/PhilipDeRudder)
+
+We've learnt a lot during this project.. Not only did we sharpen our Unity and C# skills, we also got some new insight about how to work in a multidisciplinary team. We saw how to communicate with non-IT people and how to report back to them. 
+
+Finally we would like to thank our teacher, Mr. Tom Peeters, to share his insights and knowledge with us. With his support, we were able to make significant progress during the course of this project.
