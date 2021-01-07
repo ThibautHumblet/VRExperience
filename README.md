@@ -22,6 +22,7 @@
   - [Hands and interaction](#hands-and-interaction)
   - [Sphere 'teleportation' on object interaction](#sphere-teleportation-on-object-interaction)
   - [Shaders](#shaders)
+  - [Scene transition](#scene-transition)
 - [Our team](#our-team)
 - [Licence](#licence)
 
@@ -258,6 +259,89 @@ Since shaders are extremely difficult to work with, we've based ourselves on som
 - [GLSL Noise Algorithms](https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83)
 
 We have learned a lot about shaders and how they can improve the immersive experience. Now we know how to quickly apply these to our videos and how to show these as a proof of concept. We are proud of the knowledge that we gained since this was a completely new subject.
+
+### Scene transition
+Because a hard cut between our videos would ruin the immersion, we decided to add a small fade between our camera transitions. This way, the user will not see himself teleport but gets the feeling the protagonist closes his eyes for a while. Once he opens them, he will find himself standing in a different scene. This is a great workaround and was done using some simple lines of code.
+
+```cs
+void Start()
+{
+    LoadingOverlay.ReverseNormals(this.gameObject);
+    this.fading = false;
+    this.fade_timer = 0;
+
+    this.material = this.gameObject.GetComponent<Renderer>().material;
+    this.from_color = this.material.color;
+    this.to_color = this.material.color;
+}
+```
+
+How we achieve this is by placing a cube over the camera which we will observe from the inside. Depending on the alpha value, we will have no or full transparency. At the start of the code, we will initialize our fade. We get our materials and our colors and reset the timer. We also make sure the fading effect is set to false so we won't start with a fading animation.
+
+```cs
+void Update()
+{
+    if(this.fading == false)
+        return;
+
+    this.fade_timer += Time.deltaTime;
+    this.material.color = Color.Lerp(this.from_color, this.to_color, this.fade_timer);
+    if(this.material.color == this.to_color){
+        this.fading = false;
+        this.fade_timer = 0;
+        fadecomplete = true;
+    }
+}
+
+public void FadeOut()
+{
+    this.from_color.a = this.in_alpha;
+    this.to_color.a = this.out_alpha;
+    if(this.to_color != this.material.color)
+        this.fading = true;
+}
+
+public void FadeIn(){
+    this.from_color.a = this.out_alpha;
+    this.to_color.a = this.in_alpha;
+    if(this.to_color != this.material.color)
+        this.fading = true;
+}
+```
+
+With the FadeIn() and FadeOut() methods we are able to adjust the alpha value of the color, which will increase of decrease the transparency of the objects. They will also set the fading Boolean to true or false.
+
+```cs
+public static void ReverseNormals(GameObject gameObject) 
+{
+    MeshFilter filter = gameObject.GetComponent(typeof(MeshFilter)) as MeshFilter;
+    if(filter != null)
+    {
+        Mesh mesh = filter.mesh;
+        Vector3[] normals = mesh.normals;
+        for(int i = 0; i < normals.Length; i++)
+            normals[i] = -normals[i];
+
+        mesh.normals = normals;
+
+        for(int m = 0; m < mesh.subMeshCount; m++)
+        {
+            int[] triangles = mesh.GetTriangles(m);
+
+            for(int i = 0; i < triangles.Length; i += 3)
+            {
+                int temp = triangles[i + 0];
+                triangles[i + 0] = triangles[i + 1];
+                triangles[i + 1] = temp;
+            }
+
+            mesh.SetTriangles(triangles, m);
+        }
+    }
+}
+```
+
+Finally, we have our ReverseNormals() method. This will be used for rendering the inside of our cube instead of the outside. This is necessary because unity usually only renders the outside of objects. Because our camera is placed on the inside of the cube, we needed to use this as a workaround.
 
 ## Our team
 Our code was written by these people. Due to the fact that we did not all have a pair of VR glasses; the development was not always that easy. But through good communication and teamwork, everyone did their fair share.
