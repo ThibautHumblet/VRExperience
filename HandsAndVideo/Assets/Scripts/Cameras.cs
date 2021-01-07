@@ -8,12 +8,12 @@ public class Cameras : MonoBehaviour
 {
 
     public Camera[] cameras;
-    public GameObject[] anderedinges;
+    public GameObject[] cameraoffsets;
     //private int currentCameraIndex;
     //public GameObject[] selectorArr = new GameObject[3];
     //private movelog movelog;
 
-    public string aangeraakt = "yeet";
+    public string aangeraakt = "start"; 
     bool abletochoosedrugs = true;
     bool ablatochoosetransport = false;
     bool ablekeuzelsd=false;
@@ -79,9 +79,9 @@ public class Cameras : MonoBehaviour
 
         }
 
-        for (int i = 1; i < anderedinges.Length; i++)
+        for (int i = 1; i < cameraoffsets.Length; i++)
         {
-            anderedinges[i].gameObject.SetActive(false);
+            cameraoffsets[i].gameObject.SetActive(false);
             // selectorArr[i].gameObject.VideoPlayer();
 
         }
@@ -93,10 +93,10 @@ public class Cameras : MonoBehaviour
             Debug.Log("Camera with name: " + cameras[0].GetComponent<Camera>().name + ", is now enabled");
         }
         //dit heb ik toegevoegd om uiteindelijk ipv van hardcoded de arraygrootte mee te geven kan je dit via het empty object doen
-        if (anderedinges.Length > 0)
+        if (cameraoffsets.Length > 0)
         {
-            anderedinges[0].gameObject.SetActive(true);
-            Debug.Log("Camera with name: " + anderedinges[0].GetComponent<Camera>().name + ", is now enabled");
+            cameraoffsets[0].gameObject.SetActive(true);
+            Debug.Log("Camera with name: " + cameraoffsets[0].GetComponent<Camera>().name + ", is now enabled");
         }
     }
 
@@ -156,7 +156,7 @@ public class Cameras : MonoBehaviour
             interactionmanager.SetActive(true);
         }
 
-        if (aangeraakt != "yeet" && abletochoosedrugs)
+        if (aangeraakt != "start" && abletochoosedrugs)
         {
             //kijken naar de logwaarde (static var in movelog)
             // afhankelijk van de keuze zullen er bepaalde camera's worden aan of uitgezet worden
@@ -229,7 +229,6 @@ public class Cameras : MonoBehaviour
 
         if (abletorestart && aangeraakt=="restart")
         {
-            Debug.Log("aahhh de jos");
             Restart();
             abletorestart = false;
         }
@@ -276,14 +275,14 @@ public class Cameras : MonoBehaviour
         Debug.Log("Camera with name: " + cameras[cameranumb].GetComponent<Camera>().name + ", is now enabled");
 
 
-        for (int i = 0; i < anderedinges.Length; i++)
+        for (int i = 0; i < cameraoffsets.Length; i++)
         {
-            anderedinges[i].gameObject.SetActive(false);
+            cameraoffsets[i].gameObject.SetActive(false);
         }
-        anderedinges[cameranumb].gameObject.SetActive(true);
+        cameraoffsets[cameranumb].gameObject.SetActive(true);
 
         allevideos[cameranumb].Play();
-        Debug.Log(allevideos[cameranumb]);
+        //Debug.Log(allevideos[cameranumb]);
     }
 
 }

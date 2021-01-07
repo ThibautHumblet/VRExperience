@@ -1886,7 +1886,7 @@ MonoBehaviour:
   - {fileID: 823738191}
   - {fileID: 152545803}
   - {fileID: 2013795224}
-  anderedinges:
+  cameraoffsets:
   - {fileID: 2020435431}
   - {fileID: 1987146245}
   - {fileID: 2137526519}
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   - {fileID: 1313669024}
   - {fileID: 1203919627}
   - {fileID: 848008698}
-  aangeraakt: yeet
+  aangeraakt: test
   timerwandelenstart: 0
   abletorestart: 0
   timerwandelen: 0
@@ -6535,7 +6535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 732804576}
+  m_InteractionManager: {fileID: 2097804422}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
