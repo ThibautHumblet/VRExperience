@@ -43,3 +43,7 @@ sysinfo.txt
 # HandsAndVideo specific
 HandsAndVideo/Assets/Scripts/Cameras.cs.meta
 HandsAndVideo/Logs/AssetImportWorker0-prev.log
+
+HandsAndVideo/Assets/Fade/Starting.cs
+
+HandsAndVideo/Assets/Fade/Starting.cs.meta
