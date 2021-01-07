@@ -20,7 +20,7 @@
 - [Specific project-related documentation](#specific-project-related-documentation)
   - [Inverted sphere](#inverted-sphere)
   - [Hands and interaction](#hands-and-interaction)
-  - [Sphere 'teleportation'](#sphere-teleportation)
+  - [Sphere 'teleportation' on object interaction](#sphere-teleportation-on-object-interaction)
   - [Shaders](#shaders)
 - [Our team](#our-team)
 - [Licence](#licence)
@@ -138,7 +138,7 @@ void UpdateAnimations()
 
 When we have our hands and our interactions, grabbing objects is extremely easy. We only need to set some components to our desired object and we're good to go. More precisely we need to add a *Collider*, to make the object collidable, a *Rigidbody*, for giving the object some physics, and a *XR Grab Interactable*, to let our XR toolkit handle the grabbing. After adding these components, we have our object interaction.
 
-### Sphere 'teleportation'
+### Sphere 'teleportation' on object interaction
 Because our project consists of multiple video clips, we need to find a way to change between them. It's not that easy to use the same inverted sphere and just switch the video. We found a workaround to just switch between different cameras that are inside the spheres. This will happen when we interact with a certain object.
 
 ```cs
@@ -181,30 +181,45 @@ void Start()
 ```
 In our initialization script, we check how many cameras there are. Then we will turn all these camera's off, except the first one. Then we check if there are multiple cameras added to the controller, we will just enable the first one.
 
-In our update script, we listen to an event. When this happens, we will change our currentCameraIndex variable. Then we just simply disable the current camera and enable the next camera. The user will have the immersion that he's now in a different scene. When we reach the end of the camera array, move back to the beginning or the array.
+In our update script, we listen to an event. Depending on which object is touched, we will switch our camera. This will be checked using the static variable in *movelog*. The choice will decide which cameras will be turned on or off. If a drug is chosen, we will also apply our timer which will have an inpact on our shaders.
+
 ```cs
 void Update()
 {
-    if (Input.GetKeyDown(KeyCode.C))
+
+    ...
+
+    if (aangeraakt != "start" && abletochoosedrugs)
     {
-        currentCameraIndex++;
-        Debug.Log("C button has been pressed. Switching to the next camera");
-        if (currentCameraIndex < cameras.Length)
+        switch (aangeraakt)
         {
-            cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-            cameras[currentCameraIndex].gameObject.SetActive(true);
-            Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
+            case "Friendsenter":
+                updateCamera(1);
+                break;
+            case "LSD":
+                timerlsdstrt = true;
+                updateCamera(10);
+                break;
+            case "ALCOHOL":
+                timeralcoholstart = true;
+                updateCamera(4);
+                break;
+            case "XTC":
+                timerstart = true;
+                updateCamera(8);
+                break;
+            default:
+                updateCamera(0);
+                break;
         }
-        else
-        {
-            cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-            currentCameraIndex = 0;
-            cameras[currentCameraIndex].gameObject.SetActive(true);
-            Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
-        }
+        disabledopties.SetActive(false);
+        abletochoosedrugs = false;
+        ablatochoosetransport = true;
     }
 }
 ```
+
+After the user has chosen its drug, he will later have the ability to choose his mode of transport. If we would decide to add extra drugs, we can simply add them to our switch case.
 
 ### Shaders
 The reason we've chosen for applying our shaders during the experience instead of using video editing beforehand, is very simple. We want to keep our scalability. Now we can use our shaders for every new video we add, instead of returning to our video editing software and manually adding an effect. This way, we will ensure that we can improve on this proof of concept once we film and add new videos.
