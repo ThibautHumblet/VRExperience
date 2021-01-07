@@ -11511,6 +11511,7 @@ GameObject:
   - component: {fileID: 1436220503}
   - component: {fileID: 1436220502}
   - component: {fileID: 1436220506}
+  - component: {fileID: 1436220507}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11631,6 +11632,14 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 0
+--- !u!33 &1436220507
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436220501}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1443026753
 GameObject:
   m_ObjectHideFlags: 0

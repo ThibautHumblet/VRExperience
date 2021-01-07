@@ -9,10 +9,7 @@ public class Cameras : MonoBehaviour
 
     public Camera[] cameras;
     public GameObject[] cameraoffsets;
-    private LoadingOverlay[] overlays;
-    //private int currentCameraIndex;
-    //public GameObject[] selectorArr = new GameObject[3];
-    //private movelog movelog;
+    //private LoadingOverlay[] overlays;
 
     public string aangeraakt = "start"; 
     bool abletochoosedrugs = true;
@@ -25,7 +22,7 @@ public class Cameras : MonoBehaviour
     public bool timerwandelenstart = false;
     public bool abletorestart = false;
 
-    int huidigecamera = 0;
+    //int huidigecamera = 0;
 
 
     float timer = 0;
@@ -56,24 +53,6 @@ public class Cameras : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        /*for (int i = 1; i < allevideos.Length; i++)
-        {
-            allevideos[i].Pause();
-            // selectorArr[i].gameObject.VideoPlayer();
-
-        }*/
-
-
-        //autovideo.Pause();
-       //autovideolsd.Pause();
-
-
-        //movelog = gameObject.AddComponent<movelog>();
-
-
-        //currentCameraIndex = 0;
-
-
         // Alle camera's uitzetten buiten de eerste
         for (int i = 1; i < cameras.Length; i++)
         {
@@ -88,16 +67,23 @@ public class Cameras : MonoBehaviour
             // selectorArr[i].gameObject.VideoPlayer();
 
         }
-        //alle overlays toewijzen
+       
+        
+        /*//alle overlays toewijzen
         for (int i=1; i<cameras.Length; i++)
         {
             overlays[i] = cameras[i].GetComponentInChildren<LoadingOverlay>();
         }
+
         //make sure all screens are black
         foreach (var overlay in overlays)
         {
             overlay.FadeIn();
         }
+
+        overlays[0].FadeOut();
+
+        */
 
         //dit heb ik toegevoegd om uiteindelijk ipv van hardcoded de arraygrootte mee te geven kan je dit via het empty object doen
         if (cameras.Length > 0)
@@ -247,28 +233,6 @@ public class Cameras : MonoBehaviour
         }
 
 
-        //hieronder gewoon een oud script waar voor van camera te wisselen
-
-        /*
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            currentCameraIndex++;
-            Debug.Log("C button has been pressed. Switching to the next camera");
-            if (currentCameraIndex < cameras.Length)
-            {
-                cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-                cameras[currentCameraIndex].gameObject.SetActive(true);
-                Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
-            }
-            else
-            {
-                cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-                currentCameraIndex = 0;
-                cameras[currentCameraIndex].gameObject.SetActive(true);
-                Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
-            }
-        }
-        */
     }
 
     [System.Obsolete]
@@ -280,6 +244,8 @@ public class Cameras : MonoBehaviour
     // deze functie heeft als parameter de index van de camera waar we naartoe moeten gaan (aan en uit zetten dus)
     private void updateCamera(int cameranumb)
     {
+        
+        /*
         //fade from old camera
         overlays[huidigecamera].FadeIn();
         //check if fade is complete
@@ -287,6 +253,7 @@ public class Cameras : MonoBehaviour
 
             //set complete to false
             overlays[huidigecamera].fadecomplete = false;
+        */
 
             for (int i = 0; i < cameras.Length; i++)
             {
@@ -304,12 +271,12 @@ public class Cameras : MonoBehaviour
             cameraoffsets[cameranumb].gameObject.SetActive(true);
             
             //fade on new camera
-            overlays[cameranumb].FadeOut();
+           // overlays[cameranumb].FadeOut();
             
             
             allevideos[cameranumb].Play();
             //Debug.Log(allevideos[cameranumb]);
-        }
+        
         
     }
 
