@@ -20,7 +20,7 @@
 - [Specific project-related documentation](#specific-project-related-documentation)
   - [Inverted sphere](#inverted-sphere)
   - [Hands and interaction](#hands-and-interaction)
-  - [Sphere 'teleportation'](#sphere-teleportation)
+  - [Sphere 'teleportation' on object interaction](#sphere-teleportation-on-object-interaction)
   - [Shaders](#shaders)
 - [Our team](#our-team)
 - [Licence](#licence)
@@ -48,7 +48,7 @@ In your Unity project, enable preview packages in Edit > Project Settings > Pack
 Install the XR interaction toolkit in your package manager. This can be done in Window > Package Manager > XR Interaction Toolkit > Install. Be sure you have enabled all packages from the Unity Registry. 
 
 ### 5. Start developing
-Now you're ready to develop your own Unity VR Experience! Try playing around with all the different features and XR Components. If you're stuck, or if you need some inspiration, you can always check out this repo or visit the following useful guides;
+Now you are ready to develop your own Unity VR Experience! Try playing around with all the different features and XR Components. If you're stuck, or if you need some inspiration, you can always check out this repo or visit the following useful guides;
 - [VR With Andrew (Youtube)](https://www.youtube.com/channel/UCG8bDPqp3jykCGbx-CiL7VQ)
 - [Getting started with VR in Unity](https://docs.unity3d.com/2019.3/Documentation/Manual/VROverview.html)
 - [Valem (Youtube)](https://www.youtube.com/channel/UCPJlesN59MzHPPCp0Lg8sLw)
@@ -73,13 +73,13 @@ public class InvertedSphere : EditorWindow
 #endif
 ````
 
-The inital code was designed to put it in a specific place in a specific folder. This isn't very user friendly and is very keen to break if the developer is not careful. Our simple fix made the code more resilient.
+The initial code was designed to put it in a specific place in a specific folder. This is not very user friendly and is very keen to break if the developer is not careful. Our simple fix made the code more resilient.
 
 ### Hands and interaction
 We want to let the user be immersed in our VR experience and let them use their hands. To achieve this, hands interaction was implemented in the application.
 First, we downloaded the hands models from the [Oculus Developers](https://developer.oculus.com/downloads/package/oculus-hand-models/) page. After downloading them, we put the assets in our Unity project. 
 
-Then, we added two empty objects in our XR Rigs Camera Offset. We renamed the objects both *LeftHand* and *RightHand* and gave them both an XR Controller and XR Direct interactor. Now we're ready to interact with objects, but we can't see our hands yet. We need to make some prefabs where we will store our hands. In the prefab, we put our *HandsEnabled* script and our models. When the code starts, we initialize our controllers. We also try to initialize them when the controllers are offline. This way, the user will be able to activate his controllers when the application is already running.
+Then, we added two empty objects in our XR Rigs Camera Offset. We renamed the objects both *LeftHand* and *RightHand* and gave them both an XR Controller and XR Direct interactor. Now we are ready to interact with objects, but we can't see our hands yet. We need to make some prefabs where we will store our hands. In the prefab, we put our *HandsEnabled* script and our models. When the code starts, we initialize our controllers. We also try to initialize them when the controllers are offline. This way, the user will be able to activate his controllers when the application is already running.
 ````cs
 void Start()
 {
@@ -136,10 +136,10 @@ void UpdateAnimations()
 }
 ````
 
-When we have our hands and our interactions, grabbing objects is extremely easy. We only need to set some components to our desired object and we're good to go. More precisely we need to add a *Collider*, to make the object collidable, a *Rigidbody*, for giving the object some physics, and a *XR Grab Interactable*, to let our XR toolkit handle the grabbing. After adding these components, we have our object interaction.
+When we have our hands and our interactions, grabbing objects is extremely easy. We only need to set some components to our desired object and we are good to go. More precisely we need to add a *Collider*, to make the object collidable, a *Rigidbody*, for giving the object some physics, and a *XR Grab Interactable*, to let our XR toolkit handle the grabbing. After adding these components, we have our object interaction.
 
-### Sphere 'teleportation'
-Because our project consists of multiple video clips, we need to find a way to change between them. It's not that easy to use the same inverted sphere and just switch the video. We found a workaround to just switch between different cameras that are inside the spheres. This will happen when we interact with a certain object.
+### Sphere 'teleportation' on object interaction
+Because our project consists of multiple video clips, we need to find a way to change between them. It is not that easy to use the same inverted sphere and just switch the video. We found a workaround to just switch between different cameras that are inside the spheres. This will happen when we interact with a certain object.
 
 ```cs
 public class Cameras : MonoBehaviour
@@ -160,7 +160,7 @@ public class Cameras : MonoBehaviour
 }
 ```
 
-First, we make an assign our variables. We make an array of all our camera's where we can switch through. We also keep track of our current camera, using the currentCameraIndex variable. We wil use selectorArr to wait playing these videos, until we enter the designated sphere.
+First, we make an assign our variables. We make an array of all our camera's where we can switch through. We also keep track of our current camera, using the currentCameraIndex variable. We will use selectorArr to wait to play these videos, until we enter the designated sphere.
 
 ```cs
 void Start()
@@ -181,44 +181,59 @@ void Start()
 ```
 In our initialization script, we check how many cameras there are. Then we will turn all these camera's off, except the first one. Then we check if there are multiple cameras added to the controller, we will just enable the first one.
 
-In our update script, we listen to an event. When this happens, we will change our currentCameraIndex variable. Then we just simply disable the current camera and enable the next camera. The user will have the immersion that he's now in a different scene. When we reach the end of the camera array, move back to the beginning or the array.
+In our update script, we listen to an event. Depending on which object is touched, we will switch our camera. This will be checked using the static variable in *movelog*. The choice will decide which cameras will be turned on or off. If a drug is chosen, we will also apply our timer which will have an inpact on our shaders.
+
 ```cs
 void Update()
 {
-    if (Input.GetKeyDown(KeyCode.C))
+
+    ...
+
+    if (aangeraakt != "start" && abletochoosedrugs)
     {
-        currentCameraIndex++;
-        Debug.Log("C button has been pressed. Switching to the next camera");
-        if (currentCameraIndex < cameras.Length)
+        switch (aangeraakt)
         {
-            cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-            cameras[currentCameraIndex].gameObject.SetActive(true);
-            Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
+            case "Friendsenter":
+                updateCamera(1);
+                break;
+            case "LSD":
+                timerlsdstrt = true;
+                updateCamera(10);
+                break;
+            case "ALCOHOL":
+                timeralcoholstart = true;
+                updateCamera(4);
+                break;
+            case "XTC":
+                timerstart = true;
+                updateCamera(8);
+                break;
+            default:
+                updateCamera(0);
+                break;
         }
-        else
-        {
-            cameras[currentCameraIndex - 1].gameObject.SetActive(false);
-            currentCameraIndex = 0;
-            cameras[currentCameraIndex].gameObject.SetActive(true);
-            Debug.Log("Camera with name: " + cameras[currentCameraIndex].GetComponent<Camera>().name + ", is now enabled");
-        }
+        disabledopties.SetActive(false);
+        abletochoosedrugs = false;
+        ablatochoosetransport = true;
     }
 }
 ```
 
+After the user has chosen its drug, he will later have the ability to choose his mode of transport. If we would decide to add extra drugs, we can simply add them to our switch case.
+
 ### Shaders
-The reason we've chosen for applying our shaders during the experience instead of using video editing beforehand, is very simple. We want to keep our scalability. Now we can use our shaders for every new video we add, instead of returning to our video editing software and manually adding an effect. This way, we will ensure that we can improve on this proof of concept once we film and add new videos.
+The reason we have chosen for applying our shaders during the experience instead of using video editing beforehand, is very simple. We want to keep our scalability. Now we can use our shaders for every new video we add, instead of returning to our video editing software and manually adding an effect. This way, we will ensure that we can improve on this proof of concept once we film and add new videos.
 
 Our shaders are code that run on the GPU instead of the CPU. They can change levels of colours in an image, produce special effects and can be used for video post-processing. They tell the computer how to draw something in a specific way. The languages we used to create these shaders are called Cg (C for Graphics) and HLSL (High-Level Shading Language).
 
-At the start you want to give compilation directives which can be given through  *#pragma statements*. There are many pragma's to use but in the Drunk and Colourshift shader we use the basics ones used in all shaders and target 3.0. The target allows certain instructions. In 3.0 we have the math instructions we need to distort the images with trigonometry.
+At the start you want to give compilation directives which can be given through *#pragma statements*. There are many pragmas to use but in the Drunk and Colourshift shader we use the basics ones used in all shaders and target 3.0. The target allows certain instructions. In 3.0 we have the math instructions we need to distort the images with trigonometry.
 ```
 #pragma vertex vert
 #pragma fragment frag
 #pragma fragmentoption ARB_precision_hint_fastest
 #pragma target 3.0
 ```
-After this we have the structures. Structures pass raw info about geometry being rendered to the vertex shader. Essentially objects in 3D are typically created using triangles. These triangles corners are what vertices are. You can manipulate these triangles to distort images or change the colours. For example if you have 1 sprite of a character. You can use a shader to change the colours of this character and essentially have infinite different looking characters while only using 1 image.
+After this we have the structures. Structures pass raw info about geometry being rendered to the vertex shader. Essentially objects in 3D are typically created using triangles. These triangles corners are what vertices are. You can manipulate these triangles to distort images or change the colours. For example, if you have 1 sprite of a character. You can use a shader to change the colours of this character and essentially have infinite different looking characters while only using 1 image.
 For the drunk shader we will map the vertices in uv (coordinates) and create a wavy effect by using trigonometry. The time is to have the distorted effect happen over time instead of just having a still wavy image.
 ```cs
 inline float2 getOffset(float time, float2 uv)
@@ -235,7 +250,7 @@ col.r = tex2D(_MainTex, p+offset.xy).r;
 col.b = tex2D(_MainTex, p+offset.yx).b;
 ```
 
-Since shaders are extremely difficult to work with, we've based ourself on some pre-existing shaders from the internet. We used these as a guideline to quickly get the hang of it and to made our own shaders. Sources that were used to create and learn more about shaders as well as more extensive explanations are the following links:
+Since shaders are extremely difficult to work with, we've based ourselves on some pre-existing shaders from the internet. We used these as a guideline to quickly get the hang of it and to make our own shaders. Sources that were used to create and learn more about shaders as well as more extensive explanations are the following links:
 
 - [Nvidia vertex shaders](https://www.nvidia.com/en-us/drivers/feature-vertexshader/#:~:text=What%20is%20a%20vertex%3F,on%20the%20objects'%20vertex%20data)
 - [Unity's documentation about shaders ](https://wiki.unity3d.com/index.php/Shader_Code)
@@ -245,7 +260,7 @@ Since shaders are extremely difficult to work with, we've based ourself on some 
 We have learned a lot about shaders and how they can improve the immersive experience. Now we know how to quickly apply these to our videos and how to show these as a proof of concept. We are proud of the knowledge that we gained since this was a completely new subject.
 
 ## Our team
-Our code was written by these people. Due to the fact that we did not all have a pair of VR glasses, the development was not always that easy. But through good communication and teamwork, everyone did their fair share.
+Our code was written by these people. Due to the fact that we did not all have a pair of VR glasses; the development was not always that easy. But through good communication and teamwork, everyone did their fair share.
 
 - [Thibaut Humblet](https://github.com/ThibautHumblet)
 - [Stef Martens](https://github.com/stef2607)
@@ -253,9 +268,9 @@ Our code was written by these people. Due to the fact that we did not all have a
 - [Kasper Ruys](https://github.com/KasperRuys)
 - [Philip De Rudder](https://github.com/PhilipDeRudder)
 
-We've learnt a lot during this project.. Not only did we sharpen our Unity and C# skills, we also got some new insight about how to work in a multidisciplinary team. We saw how to communicate with non-IT people and how to report back to them. 
+We've learnt a lot during this project. Not only did we sharpen our Unity and C# skills, but we also got some new insight about how to work in a multidisciplinary team. We saw how to communicate with non-IT people and how to report back to them. 
 
-Finally we would like to thank our teacher, Mr. Tom Peeters, to share his insights and knowledge with us. With his support, we were able to make significant progress during the course of this project.
+Finally, we would like to thank our teacher, Mr. Tom Peeters, to share his insights and knowledge with us. With his support, we were able to make significant progress during the course of this project.
 
 ## Licence
 This project is licensed under the terms of the **Apache** licence.
