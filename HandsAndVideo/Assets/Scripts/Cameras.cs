@@ -9,6 +9,7 @@ public class Cameras : MonoBehaviour
 
     public Camera[] cameras;
     public GameObject[] cameraoffsets;
+    private LoadingOverlay[] overlays;
     //private int currentCameraIndex;
     //public GameObject[] selectorArr = new GameObject[3];
     //private movelog movelog;
@@ -23,6 +24,8 @@ public class Cameras : MonoBehaviour
     bool timerlsdstrt = false;
     public bool timerwandelenstart = false;
     public bool abletorestart = false;
+
+    int huidigecamera = 0;
 
 
     float timer = 0;
@@ -84,6 +87,16 @@ public class Cameras : MonoBehaviour
             cameraoffsets[i].gameObject.SetActive(false);
             // selectorArr[i].gameObject.VideoPlayer();
 
+        }
+        //alle overlays toewijzen
+        for (int i=1; i<cameras.Length; i++)
+        {
+            overlays[i] = cameras[i].GetComponentInChildren<LoadingOverlay>();
+        }
+        //make sure all screens are black
+        foreach (var overlay in overlays)
+        {
+            overlay.FadeIn();
         }
 
         //dit heb ik toegevoegd om uiteindelijk ipv van hardcoded de arraygrootte mee te geven kan je dit via het empty object doen
@@ -267,22 +280,37 @@ public class Cameras : MonoBehaviour
     // deze functie heeft als parameter de index van de camera waar we naartoe moeten gaan (aan en uit zetten dus)
     private void updateCamera(int cameranumb)
     {
-        for (int i = 0; i < cameras.Length; i++)
-        {
-            cameras[i].gameObject.SetActive(false);
+        //fade from old camera
+        overlays[huidigecamera].FadeIn();
+        //check if fade is complete
+        if (overlays[huidigecamera].fadecomplete==true) {
+
+            //set complete to false
+            overlays[huidigecamera].fadecomplete = false;
+
+            for (int i = 0; i < cameras.Length; i++)
+            {
+                cameras[i].gameObject.SetActive(false);
+            }
+            cameras[cameranumb].gameObject.SetActive(true);
+            
+            Debug.Log("Camera with name: " + cameras[cameranumb].GetComponent<Camera>().name + ", is now enabled");
+
+
+            for (int i = 0; i < cameraoffsets.Length; i++)
+            {
+                cameraoffsets[i].gameObject.SetActive(false);
+            }
+            cameraoffsets[cameranumb].gameObject.SetActive(true);
+            
+            //fade on new camera
+            overlays[cameranumb].FadeOut();
+            
+            
+            allevideos[cameranumb].Play();
+            //Debug.Log(allevideos[cameranumb]);
         }
-        cameras[cameranumb].gameObject.SetActive(true);
-        Debug.Log("Camera with name: " + cameras[cameranumb].GetComponent<Camera>().name + ", is now enabled");
-
-
-        for (int i = 0; i < cameraoffsets.Length; i++)
-        {
-            cameraoffsets[i].gameObject.SetActive(false);
-        }
-        cameraoffsets[cameranumb].gameObject.SetActive(true);
-
-        allevideos[cameranumb].Play();
-        //Debug.Log(allevideos[cameranumb]);
+        
     }
 
 }

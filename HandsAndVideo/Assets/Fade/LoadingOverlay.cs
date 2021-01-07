@@ -5,7 +5,7 @@ using System.Collections;
 public class LoadingOverlay : MonoBehaviour {
     private bool fading;
     private float fade_timer;
-    public bool fadecomplete;
+    public bool fadecomplete=false;
 
     public float in_alpha = 1.0f;
     public float out_alpha = 0.0f;
@@ -33,6 +33,7 @@ public class LoadingOverlay : MonoBehaviour {
         if(this.material.color == this.to_color){
             this.fading = false;
             this.fade_timer = 0;
+            fadecomplete = true;
         }
     }
 
