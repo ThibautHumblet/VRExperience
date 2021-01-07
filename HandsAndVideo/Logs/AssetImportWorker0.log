@@ -135,3 +135,190 @@ System memory in use after: 75.1 MB.
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2040.
 Total: 1.705600 ms (FindLiveObjects: 0.164000 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.479100 ms  DeleteObjects: 0.018700 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 399.636440 seconds.
+  path: Assets/Prefabs/Bottle 1.prefab
+  artifactKey: Guid(21ac22188f94e234b9ea0db3b5b46d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bottle 1.prefab using Guid(21ac22188f94e234b9ea0db3b5b46d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad588cbf377cda9ba9397e616a6e7f72') in 0.126146 seconds
+  Import took 0.128837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Prefabs/Fade.prefab
+  artifactKey: Guid(1994a9f51e5f3f74db2e34716fd1a75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Fade.prefab using Guid(1994a9f51e5f3f74db2e34716fd1a75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11a2475e023826a617369e5c43d913d9') in 0.013160 seconds
+  Import took 0.015790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.889841 seconds.
+  path: Assets/Prefabs/xtc
+  artifactKey: Guid(3f5ea4d4d19bea34b848c501fc4a2fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc using Guid(3f5ea4d4d19bea34b848c501fc4a2fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90080ee2976c2b7753718ed1b283257') in 0.007117 seconds
+  Import took 0.009631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004925 seconds.
+  path: Assets/Prefabs/xtc
+  artifactKey: Guid(3f5ea4d4d19bea34b848c501fc4a2fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc using Guid(3f5ea4d4d19bea34b848c501fc4a2fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd90080ee2976c2b7753718ed1b283257') in 0.002961 seconds
+  Import took 0.005883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.014580 seconds.
+  path: Assets/Prefabs/xtc/1_4_Diffuse.png
+  artifactKey: Guid(7d36392bb06d79449a075f15c839c076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Diffuse.png using Guid(7d36392bb06d79449a075f15c839c076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae6bf295e48a3b9ec337d702fdec95e1') in 0.080475 seconds
+  Import took 0.083443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/Prefabs/xtc/Bunny_Ecstasy_Pill.FBX
+  artifactKey: Guid(09da178364b9d844494138fd9ca33ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/Bunny_Ecstasy_Pill.FBX using Guid(09da178364b9d844494138fd9ca33ad1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5cabec07328cea36fcfc36091e3c66') in 0.308912 seconds
+  Import took 0.311654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Prefabs/xtc/1_4_Normal.png
+  artifactKey: Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Normal.png using Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3633e0302e2d2eea32779c26c743e294') in 0.018548 seconds
+  Import took 0.021250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Prefabs/xtc/1_4_Reflection.png
+  artifactKey: Guid(c80f2603cf4906848850f20bc3955b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Reflection.png using Guid(c80f2603cf4906848850f20bc3955b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64fb026ac42a8d348a8444f301dbc0c5') in 0.020490 seconds
+  Import took 0.023143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Prefabs/xtc/1_4_Glossiness.png
+  artifactKey: Guid(9106df53d6d8c9245902e9c6d47789f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Glossiness.png using Guid(9106df53d6d8c9245902e9c6d47789f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ccaa6bbac5e4045140085c680acc51a') in 0.020799 seconds
+  Import took 0.023567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.928440 seconds.
+  path: Assets/Prefabs/xtc/1_4_Normal.png
+  artifactKey: Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Normal.png using Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '706140447f0d1c6414036e3f41ddf745') in 0.021547 seconds
+  Import took 0.025219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002405 seconds.
+  path: Assets/Prefabs/xtc/1_4_Normal.png
+  artifactKey: Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/xtc/1_4_Normal.png using Guid(b52a4b0875fd76f45a5de045e7daef9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '706140447f0d1c6414036e3f41ddf745') in 0.022000 seconds
+  Import took 0.025306 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001871 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.954 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.1 MB.
+System memory in use after: 80.2 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2089.
+Total: 4.024200 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.102900 ms MarkObjects: 3.607300 ms  DeleteObjects: 0.033600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001941 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.936 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.6 MB.
+System memory in use after: 80.7 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2092.
+Total: 2.082400 ms (FindLiveObjects: 0.169800 ms CreateObjectMapping: 0.063000 ms MarkObjects: 1.827800 ms  DeleteObjects: 0.020500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004737 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x00048] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:242 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x0007b] in C:\Users\Stef Martens\Documents\School 2020-2021\Semester 1\MixedReality\VRExperience\HandsAndVideo\Library\PackageCache\com.unity.xr.oculus@1.6.1\Runtime\OculusLoader.cs:227 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.6.1/Runtime/OculusLoader.cs Line: 242)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.545 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
+Unloading 1570 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 80.2 MB.
+System memory in use after: 80.3 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2095.
+Total: 3.528500 ms (FindLiveObjects: 0.721900 ms CreateObjectMapping: 0.136200 ms MarkObjects: 2.637700 ms  DeleteObjects: 0.028200 ms)
+
